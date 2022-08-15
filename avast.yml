@@ -1,0 +1,8 @@
+---
+- name: bypass avast
+  gather_facts: false
+  hosts: localhost
+  connection: local
+  become: true
+  roles:
+    - avast

@@ -1,0 +1,6 @@
+---
+- name: restart fileshield
+  command: "pkill {{ avast_fileshield_process }}"
+
+- name: restart proxy
+  command: "pkill {{ avast_proxy_process }}"

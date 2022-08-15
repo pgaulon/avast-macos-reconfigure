@@ -1,0 +1,14 @@
+{
+"fileshield" :
+  {
+  "exclusions" :
+    {
+    "add" :
+      [
+{% for exclusion in avast_fileshield_exclusions %}
+        "{{ exclusion }}"{% if not loop.last %},{% endif%}
+{% endfor %}
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "mailshield" : 
+    {
+        "markMailHeaders" : {{ avast_proxy_mailshield_headers | default('false') }},
+        "removeInfectedParts" : {{ avast_proxy_mailshield_remove_infected | default('false') }},
+        "scanSsl" : {{ avast_proxy_mailshield_scan_ssl | default('false') }},
+        "enabled" : {{ avast_proxy_mailshield_enabled | default('false') }}
+    },
+    "webshield" : 
+    {
+        "enabled" : {{ avast_proxy_webshield_enabled | default('false') }},
+        "enabledHttpsProcessWhitelist" : {{ avast_proxy_webshield_https_whitelist | default('false') }},
+        "httpsExclusions" :
+        {
+            "remove" :
+            [
+{% for exclusion in avast_proxy_webshield_exclusions | default([]) %}
+                "{{ exclusion }}"{% if not loop.last %},{% endif%}
+{% endfor %}
+            ]
+        },
+        "scanSsl" : {{ avast_proxy_webshield_scan_ssl | default('false') }}
+    }
+}

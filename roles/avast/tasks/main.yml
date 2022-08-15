@@ -1,0 +1,12 @@
+---
+- name: change settings fileshield
+  template:
+    dest: "/Library/Application Support/Avast/config/com.avast.fileshield.conf"
+    src: com.avast.fileshield.conf.j2
+  notify: restart fileshield
+
+- name: change settings proxy
+  template:
+    dest: "/Library/Application Support/Avast/config/com.avast.proxy.conf"
+    src: com.avast.proxy.conf.j2
+  notify: restart proxy

@@ -1,0 +1,23 @@
+---
+avast_proxy_webshield_scan_ssl: "false"
+avast_proxy_webshield_https_whitelist: "false"
+avast_proxy_webshield_enabled: "false"
+avast_proxy_webshield_exclusions:
+  - "*.icloud.com"
+  - "android.clients.google.com"
+  - "aus4.mozilla.org"
+  - "aus5.mozilla.org"
+  - "gil.apple.com"
+  - "idmsa.apple.com"
+  - "safari-extensions.apple.com"
+  - "versioncheck.addons.mozilla.org"
+  - "www.googleapis.com"
+
+avast_proxy_mailshield_enabled: "false"
+avast_proxy_mailshield_headers: "false"
+avast_proxy_mailshield_remove_infected: "false"
+avast_proxy_mailshield_scan_ssl: "false"
+
+avast_fileshield_exclusions:
+  - "/opt/metasploit-framework/"
+  - "/usr/local/Cellar/aircrack-ng/"
